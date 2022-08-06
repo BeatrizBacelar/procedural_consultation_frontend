@@ -1,0 +1,113 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  padding: 8px;
+}
+
+.titleSearch {
+  text-align: left;
+  font-weight: 400;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #398ac8;
+}
+
+.searchContainer input {
+  border-radius: 5px;
+  background-color: #E6E6E6;
+  border: none;
+  width: 50%;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.searchContainer button {
+  width: 20%;
+  border-radius: 5px;
+  border: none;
+  color: #37374F;
+  background-color: #ffca02;
+  font-weight: 700;
+  padding: 16px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.searchContainer button:hover{
+  filter: brightness(0.9);
+}
+
+.searchContainer select {
+  padding: 8px 12px;
+  color: #333333;
+  background-color: #EEEEEE;
+  border: 1px solid #DDDDDD;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+
+  /* appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data'); */
+}
+
+.searchContainer select::focus, select::hover{
+  outline: none;
+  border: 1px solid #BBBBBB;
+}
+
+.searchContainer select option {
+  background-color: #FFFFFF;
+  
+}
+
+
+
