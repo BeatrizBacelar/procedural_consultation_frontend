@@ -4,7 +4,7 @@ import Input from './Input';
 import Select from './Select';
 
 
-function Header ({
+function TopBar ({
     processNumber,
     selectedCourt,
     court,
@@ -14,7 +14,7 @@ function Header ({
 }){
 
   return (
-    <div className='header'>
+    <div className='topBar'>
         <h1 className='titleSearch'>Buscar</h1>
         <p>
           Selecione um tribunal para listar os processo ou buscar pelo número unificado
@@ -38,4 +38,4 @@ function Header ({
   )
 }
 
-export default Header;
+export default TopBar;

@@ -2,7 +2,9 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 import './styles/App.css';
-import Header from './components/Header';
+
+import TopBar from './components/TopBar';
+import ContentMain from './components/ContentMain';
 
 function getProcessConsultation() {
   axios.get('http://localhost:3001/get_procedural_consultation')
@@ -44,7 +46,7 @@ function App() {
     
   return (
     <div className="App">
-      <Header 
+      <TopBar
        processNumber={processNumber}
        selectedCourt={selectedCourt}
        court={court}
@@ -52,11 +54,7 @@ function App() {
        setProcessNumber={setProcessNumber}
        setSelectedCourt={setSelectedCourt}
       />
-      {data?.map((el, index) => 
-        <div key={el.CNJ}>
-          <p>{el.CNJ}</p>
-        </div>
-      )}
+      <ContentMain data={data}/>
     </div>
   );
 }
