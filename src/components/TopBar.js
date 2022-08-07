@@ -16,10 +16,12 @@ function TopBar ({
 
   return (
     <div className='topBar'>
+      <div className='textTopBar'>
         <h1 className='titleSearch'>Buscar</h1>
         <p>
-          Selecione um tribunal para listar os processo ou buscar pelo número unificado
+          Selecione um tribunal para listar os processos ou buscar pelo número unificado
         </p>
+      </div>
       <div className='searchContainer'>
         <Select 
           selectedCourt={selectedCourt} 

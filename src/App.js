@@ -26,7 +26,6 @@ function App() {
     .then(res => setCourt(res.data))
   }
 
-  
   useEffect(() => {
     getCourts(setCourt)
     handleSearchProcess({processNumber, selectedCourt})
@@ -43,10 +42,7 @@ function App() {
        setProcessNumber={setProcessNumber}
        setSelectedCourt={setSelectedCourt}
       />
-      <div className='contentBody'>
         <ContentMain  data={data}/>
-        <ContentRight data={data}/>
-      </div>
     </div>
   );
 }

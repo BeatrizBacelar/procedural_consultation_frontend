@@ -3,10 +3,8 @@ import React from 'react';
 
 function Select ({
     selectedCourt, 
-    processNumber, 
     court, 
-    setSelectedCourt, 
-    handleSearchProcess
+    setSelectedCourt
 }){
 
    return (
@@ -15,7 +13,6 @@ function Select ({
         value={selectedCourt}
         onChange={(event) => {
         setSelectedCourt(event.target.value)
-        handleSearchProcess({processNumber, selectedCourt: event.target.value})
         }} 
         name="select">
         <option value="" selected>Todos</option>

@@ -1,10 +1,21 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useState } from 'react';
+
+import { sizeOfThings } from '../utils/Content-utils';
+
+import ContentRight from './ContentRight';
 
 function ContentMain ({data}) {
+  const [width, setWidth] = useState(window.innerWidth)
+  console.log(width)
+
+  window.addEventListener('resize', function(){
+    sizeOfThings(setWidth);
+  });
 
   return (
     <div className='contentMain'>
       {data?.map((el) => 
+      <Fragment>
         <div key={el.CNJ} className='contentSelf'>
           <div className='topContentSelf'>
             <h1>Processo n. {el.CNJ} de {el.court_origin}</h1>
@@ -19,7 +30,9 @@ function ContentMain ({data}) {
                 </Fragment> 
             )}
           </div>
+          {width > 898 && <ContentRight data={el}/>}
         </div>
+      </Fragment>
       )}
     </div>
   )
