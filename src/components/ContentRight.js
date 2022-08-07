@@ -10,7 +10,7 @@ const typePart = ['Exequente', 'Apelante']
       <Fragment key='index'>
         <h3>Detalhes do processo</h3>
         <p className='partEnvolved'>{el.CNJ}</p>
-        <div key={index} className='contentPartEnvolved'>
+        <div key={index} className='contentDetailsProcess'>
           {el.process_details.map((detail) => 
           <p className='detailProcess'>{detail}</p>
           )}
