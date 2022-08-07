@@ -14,7 +14,6 @@ function Select ({
         <select 
         value={selectedCourt}
         onChange={(event) => {
-        console.log(event.target.value)
         setSelectedCourt(event.target.value)
         handleSearchProcess({processNumber, selectedCourt: event.target.value})
         }} 

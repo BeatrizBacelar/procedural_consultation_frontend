@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 function ContentMain ({data}) {
 
-  useEffect (() => {
-     data.sort((a, b) => a.start_date > b.start_date)
-  }, [data])
   return (
-    <>
-      {data?.map((el, index) => 
+    <div className='contentMain'>
+      {data?.map((el) => 
         <div key={el.CNJ} className='contentSelf'>
           <div className='topContentSelf'>
             <h1>Processo n. {el.CNJ} de {el.court_origin}</h1>
@@ -16,15 +13,15 @@ function ContentMain ({data}) {
           <div className='contentProcessMoviments'>
             <p id='titleMoviments'>Movimentações</p>
             {el.transactions.map((trans) =>
-                <div key={trans.id}>
-                  <p>{trans.date}</p>
+                <Fragment key={trans.id}>
+                  <p id='dateMoviments'>{trans.date}</p>
                   <p id='descriptionMoviments'>{trans.description}</p>
-                </div> 
+                </Fragment> 
             )}
           </div>
         </div>
       )}
-    </>
+    </div>
   )
 }
 

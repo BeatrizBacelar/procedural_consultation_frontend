@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
 import ButtonSearch from './ButtonSearch';
 import Input from './Input';
 import Select from './Select';
