@@ -2,11 +2,11 @@
   text-align: center;
 }
 
-  /* font-size: calc(10px + 2vmin); */
 
 p, h1 {
   margin: 0;
 }
+
 
 .searchContainer {
   display: flex;
@@ -16,7 +16,6 @@ p, h1 {
   align-items: center;
   width: 80%;
   padding: 8px;
-  background-color: red;
 }
 
 .searchContainer input {
@@ -27,7 +26,7 @@ p, h1 {
   border: none;
   width: 50%;
   padding: 16px;
-  font-size: 16px;
+  font-size: calc(6px + 2vmin);
 }
 
 .searchContainer button {
@@ -50,18 +49,13 @@ p, h1 {
 .searchContainer select {
   flex-grow: 1;
   padding: 14px 32px;
-  font-size: 16px;
+  font-size: calc(6px + 2vmin);
   color: #333333;
   background-color: #EEEEEE;
   border: 1px solid #DDDDDD;
   cursor: pointer;
   border-radius: 5px;
   width: 100%;
-
-  /* appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url('data'); */
 }
 
 .searchContainer select::focus, select::hover{
@@ -88,10 +82,19 @@ p, h1 {
   padding: 24px;
 }
 
+.textTopBar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+
 @media (max-width: 768px) {
   .searchContainer {
     flex-direction: column;
+    align-items: flex-start;
     padding: 8px;
+    padding-left: 0;
   }
   .searchContainer button {
     width: auto;
@@ -104,23 +107,48 @@ p, h1 {
   }
 }
 
+@media (max-width: 768px) {
+  .topContentSelf {
+    align-items: center;
+    flex-direction: column;
+  }
+  .contentSelf {
+    width: 80%;
+    align-items: center;
+  }
+  .contentSelf h1 {
+    font-size: 16px!important;
+  }
+}
+
+@media (max-width: 768px) {
+  .textTopBar {
+    text-align: left;
+    padding: 8px;
+    padding-left: 16px;
+  }
+}
+
 .contentMain {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .contentSelf {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   align-items: flex-start;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 90%;
   padding-left: 40px;
 }
 
 .contentSelf h1 {
   font-weight: 500;
+  font-size: calc(12px + 2vmin);
   margin: 0;
 }
 
@@ -131,7 +159,6 @@ p, h1 {
   align-items: flex-start;
   padding-top: 24px;
   padding-bottom: 24px;
-  border-radius: 5px;
 }
 
 .contentProcessMoviments {
@@ -158,6 +185,8 @@ p, h1 {
 
 .contentProcessMoviments #descriptionMoviments {
   padding: 16px;
+  border-radius: 5px;
+  -webkit-line-clamp: 50;
 }
 
 .contentProcessMoviments #dateMoviments {
@@ -171,16 +200,15 @@ p, h1 {
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 24px;
-  /* background-color: red; */
 }
 
 
 .contentRight {
   width: 23%;
-  padding-top: 6%;
-  padding-right: 6%;
   text-align: left;
-  font-size: 14px;
+  font-size: calc(4px + 2vmin);
+  padding: 16px;
+  padding-top: 0;
 }
 
 .contentRight hr {
@@ -190,10 +218,11 @@ p, h1 {
 
 .contentRight h3 {
   font-weight: 600;
+  margin-top: 0;
 }
 
 .partEnvolved {
-  font-size: 12px;
+  font-size: calc(4px + 2vmin);
   padding-bottom: 8px;
   color: #797979;
 }
@@ -203,13 +232,14 @@ p, h1 {
 }
 
 .detailProcess {
-  font-size: 14px;
+  font-size: calc(4px + 2vmin);
   padding-bottom: 8px;
   color: #797979;
 }
 
 .contentDetailsProcess {
-  padding-bottom: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
   border-bottom: 0.5px solid #a8a7a7;
 }
 
