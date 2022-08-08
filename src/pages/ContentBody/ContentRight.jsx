@@ -1,5 +1,6 @@
 import React, { Fragment} from 'react';
 
+import './style.css'
 
 function ContentRight ({data}) {
 const typePart = ['Exequente', 'Apelante']

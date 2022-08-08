@@ -1,0 +1,127 @@
+.contentMain {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contentSelf {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  padding-left: 40px;
+}
+
+.contentSelf h1 {
+  font-weight: 500;
+  font-size: calc(12px + 2vmin);
+  margin: 0;
+}
+
+.topContentSelf {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.contentProcessMoviments {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 0.5px solid #7a7979;
+  border-bottom: 0;
+  width: 70%;
+  border-radius: 5px;
+}
+
+.contentProcessMoviments p {
+  text-align: left;
+  padding: 8px;
+}
+.contentProcessMoviments #titleMoviments{
+  background-color: #7ab342;
+}
+
+.contentProcessMoviments #descriptionMoviments, #titleMoviments {
+  border-bottom: 0.5px solid #a8a7a7 ;
+}
+
+.contentProcessMoviments #descriptionMoviments {
+  padding: 16px;
+  border-radius: 5px;
+  -webkit-line-clamp: 50;
+}
+
+.contentProcessMoviments #dateMoviments {
+  padding: 16px;
+  padding-bottom: 0;
+  color: #797979;
+}
+
+.contentBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+
+.contentRight {
+  width: 23%;
+  text-align: left;
+  font-size: calc(4px + 2vmin);
+  padding: 16px;
+  padding-top: 0;
+}
+
+.contentRight hr {
+  height: 0.5px;
+  color: #a8a7a7;
+}
+
+.contentRight h3 {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.partEnvolved {
+  font-size: calc(4px + 2vmin);
+  padding-bottom: 8px;
+  color: #797979;
+}
+
+.nameEnvolved {
+  color: #250ea5;
+}
+
+.detailProcess {
+  font-size: calc(4px + 2vmin);
+  padding-bottom: 8px;
+  color: #797979;
+}
+
+.contentDetailsProcess {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid #a8a7a7;
+}
+
+@media (max-width: 768px) {
+  .topContentSelf {
+    align-items: center;
+    flex-direction: column;
+  }
+  .contentSelf {
+    width: 80%;
+    align-items: center;
+  }
+  .contentSelf h1 {
+    font-size: 16px!important;
+  }
+}

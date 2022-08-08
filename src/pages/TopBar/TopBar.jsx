@@ -1,8 +1,10 @@
 import React from 'react';
 
-import ButtonSearch from './ButtonSearch';
-import Input from './Input';
-import Select from './Select';
+import './style.css';
+
+import ButtonSearch from '../../components/ButtonSearch';
+import Input from '../../components/Input';
+import Select from '../../components/Select';
 
 
 function TopBar ({

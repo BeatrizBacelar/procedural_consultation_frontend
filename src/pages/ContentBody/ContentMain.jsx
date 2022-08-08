@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react';
 
-import { sizeOfThings } from '../utils/Content-utils';
+import './style.css'
+
+import { sizeOfThings } from '../../utils/Content-utils';
 
 import ContentRight from './ContentRight';
 
@@ -15,7 +17,6 @@ function ContentMain ({data}) {
   return (
     <div className='contentMain'>
       {data?.map((el) => 
-      <Fragment>
         <div key={el.CNJ} className='contentSelf'>
           <div className='topContentSelf'>
             <h1>Processo n. {el.CNJ} de {el.court_origin}</h1>
@@ -30,9 +31,8 @@ function ContentMain ({data}) {
                 </Fragment> 
             )}
           </div>
-          {width > 898 && <ContentRight data={el}/>}
+          {width > 768 && <ContentRight data={el}/>}
         </div>
-      </Fragment>
       )}
     </div>
   )

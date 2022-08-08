@@ -1,11 +1,10 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 import './styles/App.css';
 
-import ContentMain from './components/ContentMain';
-import ContentRight from './components/ContentRight';
-import TopBar from './components/TopBar';
+import ContentMain from './pages/ContentBody/ContentMain';
+import TopBar from './pages/TopBar/TopBar';
+import api from './services/api';
 
 function App() {
   const [data, setData] = useState([])
@@ -14,7 +13,7 @@ function App() {
   const [selectedCourt, setSelectedCourt] = useState('')
   
    function handleSearchProcess({processNumber, selectedCourt}) {
-    axios.post('http://localhost:3001/get_process', {
+    api.post('http://localhost:3001/get_process', {
         processNumber: processNumber,
         court: selectedCourt 
     })
@@ -22,7 +21,7 @@ function App() {
   }
   
    function getCourts(setCourt) {
-    axios.get('http://localhost:3001/get_courts')
+    api.get('http://localhost:3001/get_courts')
     .then(res => setCourt(res.data))
   }
 
