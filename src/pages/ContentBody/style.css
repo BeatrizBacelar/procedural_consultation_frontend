@@ -17,7 +17,7 @@
 
 .contentSelf h1 {
   font-weight: 500;
-  font-size: calc(12px + 2vmin);
+  font-size: 1.5rem;
   margin: 0;
 }
 
@@ -75,7 +75,7 @@
 .contentRight {
   width: 23%;
   text-align: left;
-  font-size: calc(4px + 2vmin);
+  font-size: 0.8rem;
   padding: 16px;
   padding-top: 0;
 }
@@ -91,7 +91,7 @@
 }
 
 .partEnvolved {
-  font-size: calc(4px + 2vmin);
+  font-size: 0.6rem;
   padding-bottom: 8px;
   color: #797979;
 }
@@ -101,7 +101,7 @@
 }
 
 .detailProcess {
-  font-size: calc(4px + 2vmin);
+  font-size: 0.8rem;
   padding-bottom: 8px;
   color: #797979;
 }
