@@ -1,4 +1,13 @@
-## colocar descrição 
+## Consulta processual
+
+### Tecnologias utilizadas:
+- HTML5
+- CSS3
+- ReactJs
+
+Essa aplicação consiste em uma busca processual com barra de busca, movimentações do processo, detalhes do processo e partes envolvidas.
+
+Utilizando a barra de busca é possível filtrar os processos por tribunal de origem e número do processo.
 
 # 💻 Como testar a aplicação criada:
 
