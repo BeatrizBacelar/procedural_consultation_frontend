@@ -11,6 +11,7 @@ function App() {
   const [court, setCourt] = useState([])
   const [processNumber, setProcessNumber] = useState('')
   const [selectedCourt, setSelectedCourt] = useState('')
+  const [notFound, setNotFound] = useState(false)
   
    function handleSearchProcess({processNumber, selectedCourt}) {
     api.post('http://localhost:3001/get_process', {
@@ -25,10 +26,22 @@ function App() {
     .then(res => setCourt(res.data))
   }
 
+  function pageNotFound () {
+    if ((processNumber || selectedCourt) && !data?.length){
+      setNotFound(true)
+    } else {
+      setNotFound(false)
+    }
+  }
+
   useEffect(() => {
     getCourts(setCourt)
     handleSearchProcess({processNumber, selectedCourt})
   }, [])
+
+  useEffect (() => {
+    pageNotFound()
+  }, [processNumber, selectedCourt, data.length])
 
     
   return (
@@ -41,7 +54,11 @@ function App() {
        setProcessNumber={setProcessNumber}
        setSelectedCourt={setSelectedCourt}
       />
-        <ContentMain  data={data}/>
+      {notFound 
+        ? 
+          <h3>Processo não encontrado</h3>
+        :
+       <ContentMain  data={data}/>}
     </div>
   );
 }

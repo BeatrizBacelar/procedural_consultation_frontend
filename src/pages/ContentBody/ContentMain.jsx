@@ -8,7 +8,6 @@ import ContentRight from './ContentRight';
 
 function ContentMain ({data}) {
   const [width, setWidth] = useState(window.innerWidth)
-  console.log(width)
 
   window.addEventListener('resize', function(){
     sizeOfThings(setWidth);
