@@ -5,7 +5,7 @@ Isso se dá porque com essa estruturação se for necessário fazer uma manuten�
 
 ### Testes
 
-Foram feitos testes considerando possíveis variações nos filtros: tribunal, tribunal e número completo do processo, número do processo, tribunal e número parcial do processo.
+Foram feitos testes considerando possíveis variações nos filtros: tribunal, tribunal e número completo do processo, número do processo, tribunal e número parcial do processo. Também foi testado a inserção de um número inválido de processo com e sem tribunal específico selecionado, o resultado é que o conteúdo do body consiste um uma frase: "Processo não encontrado" exatamente o que deveria ocorrer.
 
 Como os detalhes do processo e partes envolvidas só podem ser visualizados em uma tela com tamanho maior que 768 prezando pela boa visualização das informações disposta, foram realizados teste com diferentes tamanhos de tela para observar o comportamento do ComponentRight e dos elementos do layout.
 
