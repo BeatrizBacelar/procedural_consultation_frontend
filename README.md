@@ -22,9 +22,3 @@ Utilizando a barra de busca é possível filtrar os processos por tribunal de or
 ```shell
     yarn start / npm start
 ```
-
-- Para realizar testes na aplicação:
-```shell
-    yarn test / npm run test
-```
----
