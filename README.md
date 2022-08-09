@@ -3,6 +3,7 @@
 ### Tecnologias utilizadas:
 - HTML5
 - CSS3
+- JavaScript
 - ReactJs
 
 Essa aplicação consiste em uma busca processual com barra de busca, movimentações do processo, detalhes do processo e partes envolvidas.
