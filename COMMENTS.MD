@@ -5,10 +5,13 @@ Isso se dá porque com essa estruturação se for necessário fazer uma manuten�
 
 ### Testes
 
-Foram feitos testes considerando possíveis variações nos filtros: tribunal, tribunal e número completo do processo, número do processo, tribunal e número parcial do processo. Também foi testado a inserção de um número inválido de processo com e sem tribunal específico selecionado, o resultado é que o conteúdo do body consiste um uma frase: "Processo não encontrado" exatamente o que deveria ocorrer.
+Foram feitos testes considerando possíveis variações nos filtros: tribunal, tribunal e número completo do processo, número do processo, tribunal e número parcial do processo. Todos retornaram o resultado desejado para cada tipo de filtro/busca.
 
-Como os detalhes do processo e partes envolvidas só podem ser visualizados em uma tela com tamanho maior que 768 prezando pela boa visualização das informações disposta, foram realizados teste com diferentes tamanhos de tela para observar o comportamento do ComponentRight e dos elementos do layout.
+Como os detalhes do processo e partes envolvidas só podem ser visualizados em uma tela com tamanho maior que 768px prezando pela boa visualização das informações dispostas, foram realizados testes com diferentes tamanhos de tela para observar o comportamento do ComponentRight e dos elementos do layout.
+
+Além disso, foram realizados testes de responsividade do layout com tamanhos diferentes de tela incluindo tela de celular.
 
 ### Possíveis implementações
 
-Algo que implementaria com mais tempo seriam os styled components e utilização de constantes. O styled components ajudaria a trazer padronização para o projeto por observaria components que se repetem quanto a estilização e criaria para que fossem reaproveitados. Além disso, uma estruturação com nome específicos de componentes traz maior clareza ao código do que div com o seu className apenas. Quanto a constantes, segue a questão de padronização. Uma busca por valores muito utilizados ao decorrer da aplicação armazenados em um ou mais arquivos de constantes possibilitaria organização e manutenção mais eficiente tendo em vista que esses valores seriam alterados em apenas um local e aplicado em todo o projeto. 
+Algo que implementaria com mais tempo seriam os styled components e utilização de constantes. O styled components ajudaria a trazer padronização para o projeto por observaria components que se repetem quanto a estilização e criaria para que fossem reaproveitados. Além disso, uma estruturação com nome específico para componentes traz maior clareza ao código. Quanto a constantes, segue a questão de padronização. Uma busca por valores muito utilizados ao decorrer da aplicação armazenados em um ou mais arquivos de constantes possibilitaria organização e manutenção mais eficiente tendo em vista que esses valores seriam alterados em apenas um local e aplicado em todo o projeto. 
+
