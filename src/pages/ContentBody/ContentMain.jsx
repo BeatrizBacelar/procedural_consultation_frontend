@@ -1,6 +1,6 @@
-import React, { Fragment, useState } from 'react';
+import React, {useState } from 'react';
 
-// import './style.css'
+import './style.css';
 
 import { sizeOfThings } from '../../utils/Content-utils';
 
