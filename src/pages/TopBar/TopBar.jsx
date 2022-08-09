@@ -16,29 +16,32 @@ function TopBar ({
     setSelectedCourt
 }){
 
+
   return (
-    <div className='topBar'>
-      <div className='textTopBar'>
-        <h1 className='titleSearch'>Buscar</h1>
-        <p>
-          Selecione um tribunal para listar os processos ou buscar pelo número unificado
-        </p>
-      </div>
-      <div className='searchContainer'>
-        <Select 
-          selectedCourt={selectedCourt} 
-          processNumber={processNumber}
-          court={court} 
-          setSelectedCourt={setSelectedCourt}
-          handleSearchProcess={handleSearchProcess}/>
-        <Input 
-         processNumber={processNumber} 
-         placeholder="Número do processo"
-         onChange={(event) => setProcessNumber(event.target.value)}/>
-        <ButtonSearch 
-         label="Buscar" 
-         onClick={() => handleSearchProcess({processNumber, selectedCourt})}/>
+    <div className='fullTopBar'>
+      <div className='topBar'>
+        <div className='textTopBar'>
+          <h1 className='titleSearch'>Buscar</h1>
+          <p>
+            Selecione um tribunal para listar os processos ou buscar pelo número unificado
+          </p>
         </div>
+        <div className='searchContainer'>
+          <Select 
+            selectedCourt={selectedCourt} 
+            processNumber={processNumber}
+            court={court} 
+            setSelectedCourt={setSelectedCourt}
+            handleSearchProcess={handleSearchProcess}/>
+          <Input 
+          processNumber={processNumber} 
+          placeholder="Número do processo"
+          onChange={(event) => setProcessNumber(event.target.value)}/>
+          <ButtonSearch 
+          label="Buscar" 
+          onClick={() => handleSearchProcess({processNumber, selectedCourt})}/>
+          </div>
+      </div>
     </div>
   )
 }
